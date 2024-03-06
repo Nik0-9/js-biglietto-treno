@@ -13,12 +13,12 @@ let price = km * 0.21;
 if(!isNaN(km) && !isNaN(age)){
     if(age < 18){
         price = price - (price * 20 / 100);
-        document.getElementById('ticket').innerHTML = `il prezzo del biglietto è di: ${price} euro`;
+        document.getElementById('ticket').innerHTML = `il prezzo del biglietto è di: ${price.toFixed(2)} euro`;
     } else if(age >= 65){
         price = price - (price * 40 / 100);
-        document.getElementById('ticket').innerHTML = `il prezzo del biglietto è di: ${price} euro`;
+        document.getElementById('ticket').innerHTML = `il prezzo del biglietto è di: ${price.toFixed(2)} euro`;
     } else{
-        document.getElementById('ticket').innerHTML = `il prezzo del biglietto è di: ${price} euro`;
+        document.getElementById('ticket').innerHTML = `il prezzo del biglietto è di: ${price.toFixed(2)} euro`;
     }
 } else {
     document.getElementById('ticket').innerHTML = 'non hai inserito un numero nel campo chilometri oppure età';
