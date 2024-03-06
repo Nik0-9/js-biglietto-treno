@@ -9,10 +9,8 @@ let km = (prompt('Inserire il numero di chilometri da percorrere:'));
 let age = parseInt(prompt("Inserire l'età del passeggero:"));
 let price = km * 0.21;
 
-console.log(price);
-console.log(isNaN(km));
 
-if(!isNaN(km)){
+if(!isNaN(km) && !isNaN(age)){
     if(age < 18){
         price = price - (price * 20 / 100);
         document.getElementById('ticket').innerHTML = `il prezzo del biglietto è di: ${price} euro`;
@@ -23,6 +21,6 @@ if(!isNaN(km)){
         document.getElementById('ticket').innerHTML = `il prezzo del biglietto è di: ${price} euro`;
     }
 } else {
-    document.getElementById('ticket').innerHTML = 'non hai inserito un numero nel campo km';
+    document.getElementById('ticket').innerHTML = 'non hai inserito un numero nel campo chilometri oppure età';
     
 }
